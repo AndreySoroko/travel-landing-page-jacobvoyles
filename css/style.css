@@ -1,3 +1,9 @@
+/*Подключение файла сброса стилей*/
+
+@import url(./reset.css);
+
+/*Подключение шрифтов*/
+
 /* lato-regular - latin */
 @font-face {
   font-family: 'Lato';
@@ -27,12 +33,92 @@
 }
 
 /*Модель расчета размера блока (border-box), оптимальный вариант подключения*/
+
 html {
   box-sizing: border-box;
 }
+
 /*Установка наследования свойства (box-sizing: border-box) для всех элкементов (*) 
 и псевдоэлементов (*::before, *::after)*/
+
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
+/*Базовый стиль для body*/
+
+body {
+  font-family: 'Lato';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #102746;
+}
+.wrapper {
+  max-width: 1060px;
+  margin: 0px auto;
+}
+
+/*Header styles start*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 56px;
+}
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header__item {
+margin-right: 82px;
+}
+.header__item:last-child {
+  margin-right: 0;
+}
+.header__link {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+/*:hover - при наведении, :focus - при выделении через табуляцию*/
+.header__link:hover, .header__link:focus {
+  opacity: 0.75;
+}
+/*:active - при нажатии*/
+.header__link:active {
+  opacity: 0.5;
+}
+
+/*Header styles end*/
+
+/*Intro styles start*/
+
+.intro {
+  height: 100vh;
+  background: url(../img/intro-bg.png) no-repeat;
+  background-size: cover;
+  padding-top: 263px;
+}
+.intro__title {
+  max-width: 619px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  color: #FFFFFF;
+}
+
+/*Intro styles end*/
